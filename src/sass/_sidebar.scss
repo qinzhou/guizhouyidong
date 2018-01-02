@@ -1,0 +1,27 @@
+.sidebar{
+	float: left;
+	width: 230px;
+	height: 100%;
+	border-right : 1px solid $border-color;
+	.organize{
+		padding: 20px;
+		font-size: 20px;
+		color: $text-color;
+		.arrow{
+			float: right;
+			margin-top: 10px;
+			cursor: pointer;
+		}
+	}
+	.subtitle{
+		padding: 20px;
+		font-size: 18px;
+		color: $text-color;
+		border-top : 1px solid $border-color;
+		border-bottom : 1px solid $border-color;
+	}
+	.treeview{
+		color: $text-color;
+		font-size: 14px;
+	}
+}

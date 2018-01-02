@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>员工收入证明管理</title>
+  <link rel="stylesheet" href="../css/style.css" />
+</head>
+<body>
+  <div class="c-wrap earning">
+    <div class="header">
+    	<i class="icon-book"></i>
+    	<i class="icon-close"></i>
+    	<h1 class="title">员工收入证明管理</h1>
+    </div>
+    <div class="c-main">
+    	<div class="sidebar">
+    		<h2 class="organize"><i class="arrow icon-arrow-left"></i>组织机构</h2>
+    		<h3 class="subtitle">全部</h3>
+    		<div id="treeview" class="treeview"></div>
+    	</div>
+    	<div class="content">
+    		content
+    	</div>
+    </div>
+  </div>
+<script src="../js/lib/jquery-1.11.3.min.js"></script>
+<script src="../js/lib/jstree.min.js"></script>
+<script>
+$(function () {
+	$('#treeview').jstree({
+	    'core' : {
+	      'data' : [
+	        {   "text" : "贵州移动",
+	        	"state" : {"opened" : true },
+	         	"children" : [
+		            { "text" : "省本部",
+		              "children" : [
+		              	  {
+		              	  	"text" : "本部1"
+		              	  },
+		              	  {
+		              	  	"text" : "本部2"
+		              	  },
+		              ]	
+		        	},
+		            { "text" : "贵阳分公司" },
+		            { "text" : "遵义分公司" },
+		            { "text" : "安顺分公司" },
+		            { "text" : "黔南分公司" },
+		            { "text" : "黔东南分公司" },
+		            { "text" : "铜仁分公司" },
+		            { "text" : "毕节分公司" },
+		            { "text" : "六盘水分公司" },
+		            { "text" : "黔西南分公司" },
+		            { "text" : "中移通信技术工程" },
+		            { "text" : "政企客户分公司" },
+	          ]
+	        }
+	      ]
+	    }
+	  }).on("changed.jstree", function (e, data) {
+		  console.log(data.instance.get_selected(true)[0].text);
+		  // console.log(data.instance.get_node(data.selected[0]).text);
+	    });;
+})
+</script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+

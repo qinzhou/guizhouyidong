@@ -1,0 +1,12 @@
+.icon-book{
+   @include bg(28px,30px,'icon-book');
+}
+.icon-close{
+   @include bg(16px,16px,'icon-close');
+}
+.icon-arrow-left{
+   @include bg(8px,12px,'icon-arrow-left');
+}
+.icon-arrow-right{
+   @include bg(6px,10px,'icon-arrow-right');
+}

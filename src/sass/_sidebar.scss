@@ -23,5 +23,9 @@
 	.treeview{
 		color: $text-color;
 		font-size: 14px;
+
+	}
+	.jstree-default .jstree-themeicon{
+		display: none !important;
 	}
 }

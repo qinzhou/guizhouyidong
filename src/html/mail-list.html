@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>通讯录</title>
+  <link rel="stylesheet" href="../css/bootstrap.min.css" />
+  <link rel="stylesheet" href="../css/dcalendar.picker.css" />
+  <link rel="stylesheet" href="../css/style.css" />
+</head>
+<body>
+  <div class="c-wrap mail-list">
+    <div class="header">
+    	<i class="icon-book"></i>
+    	<i class="icon-close"></i>
+    	<h1 class="title">通讯录</h1>
+    </div>
+    <div class="c-main" id="main">
+    	<div class="sidebar">
+    		<h2 class="organize">
+    		<!-- <i class="arrow icon-arrow-left" id="shrink"></i> -->
+    		组织机构</h2>
+    		<h3 class="subtitle">全部</h3>
+    		<div id="treeview" class="treeview"></div>
+    	</div>
+    	<div class="content">
+    		<div class="searchbar c">
+    			<!-- <h4 class="searchbar-title"><i id="open" class="icon-arrow-right"></i>搜索条件</h4> -->
+				<div class="search-input-wrap c">
+					<div class="search-btn">
+						<i class="icon-search"></i>
+						<span>在结果内搜索</span>
+					</div>
+					<input class="search-area" placeholder="可搜索姓名、职位、部门" type="text" />
+				</div>
+    			
+    		</div>
+    		<div class="table-result">
+    			<h4>全部结果</h4>
+    			<span>共24名员工</span>
+    		</div>
+    		<table class="table" id="table">
+    			<thead>
+	    			<tr>
+	    				<th>姓名</th>
+	    				<th>职位</th>
+	    				<th>所属部门</th>
+	    				<th>手机</th>
+	    				<th>邮箱</th>
+	    				<th>操作</th>
+	    			</tr>
+    			</thead>
+    			<tbody>
+    				<tr>
+    					<td>陈翠岭</td>
+    					<td>级员工关系专员</td>
+    					<td>人力资源部-员工关系室</td>
+    					<td>180202087656</td>
+    					<td>chencl@cmccgz.net</td>
+    					<td><span class="show-detail">查看</span></td>
+    				</tr>
+    				<tr>
+    					<td>陈翠岭</td>
+    					<td>级员工关系专员</td>
+    					<td>人力资源部-员工关系室</td>
+    					<td>180202087656</td>
+    					<td>chencl@cmccgz.net</td>
+    					<td><span  class="show-detail">查看</span></td>
+    				</tr>
+    				
+    				
+    			</tbody>
+    		</table>
+    		<div class="mail-list-empty" style="display:none;">
+    			<i class="icon-avatar"></i>
+    			<span>通讯录详情</span>
+    		</div>
+    	</div>
+    </div>
+  </div>
+<script src="../js/lib/jquery-1.11.3.min.js"></script>
+<script src="../js/lib/jstree.min.js"></script>
+
+<script>
+$(function () {
+
+
+	$('#treeview').jstree({
+	    'core' : {
+	      'data' : [
+	        {   "text" : "贵州移动",
+	        	"state" : {"opened" : true },
+	         	"children" : [
+		            { "text" : "省本部",
+		              "children" : [
+		              	  {
+		              	  	"text" : "本部1"
+		              	  },
+		              	  {
+		              	  	"text" : "本部2"
+		              	  },
+		              ]	
+		        	},
+		            { "text" : "贵阳分公司",
+		            	"children" : [
+		            		{
+		            			"text" : "分公司1"
+		            		}
+		            	] 
+		        	},
+		            { "text" : "遵义分公司" },
+		            { "text" : "安顺分公司" },
+		            { "text" : "黔南分公司" },
+		            { "text" : "黔东南分公司" },
+		            { "text" : "铜仁分公司" },
+		            { "text" : "毕节分公司" },
+		            { "text" : "六盘水分公司" },
+		            { "text" : "黔西南分公司" },
+		            { "text" : "中移通信技术工程" },
+		            { "text" : "政企客户分公司" },
+	          ]
+	        }
+	      ]
+	    }
+	  }).on("changed.jstree", function (e, data) {
+		  console.log(data.instance.get_selected(true)[0].text);
+		  // console.log(data.instance.get_node(data.selected[0]).text);
+	    });
+
+	  var $tableMenus = $('#table-menus');
+	  var $table = $('#table');
+
+/*	  $tableMenus.on('click','.item',function(){
+	  	$tableMenus.hide();
+	  });
+	  var $open = $('#open');
+	  $('#shrink').on('click',function () {
+	  	$('#main').addClass('close');
+	  	 $open.css({
+	  	 	display : 'inline-block'
+	  	 });
+	  });
+
+	  $open.on('click',function () {
+	  	$('#main').removeClass('close');
+	  	$open.hide();
+	  });*/
+})
+</script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+

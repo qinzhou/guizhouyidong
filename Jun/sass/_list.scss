@@ -1,0 +1,102 @@
+.list-page{
+	padding: 80px 40px 40px 40px;
+	.content{
+		background: #ffffff;
+		margin-top: 40px;
+		border: 1px solid #DEDEDE;
+		text-align: center;
+		.ul-title{
+			padding: 0 0 0 44px;
+			text-align: left;
+			li{
+				border-bottom: 1px solid #E8EDF1;
+				line-height: 48px;
+				a{
+					font-size: 14px;
+					color: #262626;
+					display: block;
+					position: relative;
+					padding-right: 120px;
+					width: 100%;
+					white-space: nowrap;
+					overflow: hidden;
+					text-overflow:ellipsis;
+					span{
+						position: absolute;
+						right: 0;
+						margin-right: 24px;
+					}
+					&:hover{
+						background: #F6F9FB;
+					}
+				}
+			}
+		}
+		.page{
+			display: inline-block;
+			margin: 30px 0 44px 0;
+			i{
+				display: inline-block;
+				width: 24px;
+				height: 24px;
+				border:1px solid #DBDBDB; 
+				float: left;
+				vertical-align: middle;
+				border-radius: 2px;
+				margin-right: 5px;
+			}
+			ul{
+				float: left;
+				li{
+					float: left;
+					display: inline-block;
+					a{
+						padding: 0 10px;
+						color: #3F4D57;
+						font-size: 12px;
+						display: inline-block;
+						vertical-align: middle;
+						margin-top: -3px;
+						&:hover{
+							color: #53A4F5;
+						}
+						&.cursor-text{
+							cursor: text;
+						}
+					}
+					&.hover{
+						a{
+							color: #53A4F5;
+						}
+					}
+				}
+			}
+			.num{
+				font-size: 12px;
+				color: #3F4D57;
+				margin: 0 40px;
+				input{
+					width: 80px;
+					border-radius: 4px;
+					padding: 0 10px;
+					line-height: 26px;
+					height: 26px;
+					border: 1px solid #DBDBDB;
+					margin: 0 8px;
+					text-align: center;
+				}
+			}
+			button{
+				line-height: 28px;
+				background-color: #53A4F5;
+				font-size: 12px;
+				color: #ffffff;
+				padding: 0 18px;
+				border-radius: 2px;
+				&:hover{
+					background-color:#4e84bb;
+				}
+			}
+		}
+	}
+}

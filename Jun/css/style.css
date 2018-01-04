@@ -158,10 +158,9 @@ select:focus {
   height: 20px;
   background-repeat: no-repeat;
   background-size: contain;
-  background-image: url("../images/phone.png") !important;
+  background-image: url("../images/icon_phone.png") !important;
   background-position: center;
-  background-color: transparent;
-  background-size: 25px auto; }
+  background-color: transparent; }
 
 .icon-call {
   display: inline-block;
@@ -169,10 +168,9 @@ select:focus {
   height: 20px;
   background-repeat: no-repeat;
   background-size: contain;
-  background-image: url("../images/call.png") !important;
+  background-image: url("../images/icon_phone1.png") !important;
   background-position: center;
-  background-color: transparent;
-  background-size: 20px auto; }
+  background-color: transparent; }
 
 .icon-email {
   display: inline-block;
@@ -180,10 +178,9 @@ select:focus {
   height: 20px;
   background-repeat: no-repeat;
   background-size: contain;
-  background-image: url("../images/email.png") !important;
+  background-image: url("../images/icon_email.png") !important;
   background-position: center;
-  background-color: transparent;
-  background-size: 20px auto; }
+  background-color: transparent; }
 
 .body_bg {
   background: #F6F9FB; }
@@ -448,7 +445,7 @@ select:focus {
       float: right; }
       .main-detail .content .right-side ul {
         padding: 40px 40px 0 40px;
-        width: 550px; }
+        width: 530px; }
         .main-detail .content .right-side ul li {
           border-bottom: 1px solid #E8EDF1;
           padding: 0;
@@ -457,13 +454,14 @@ select:focus {
           color: #3A3A3A; }
           .main-detail .content .right-side ul li i {
             width: 20px;
-            margin-left: -20px;
+            margin-left: -30px;
+            margin-right: 10px;
             vertical-align: middle; }
           .main-detail .content .right-side ul li .type {
             margin-right: 40px; }
           .main-detail .content .right-side ul li button {
             float: right;
-            padding: 0 37px;
+            padding: 0 25px;
             line-height: 40px;
             height: 40px;
             border: 1px solid #53A4F5;

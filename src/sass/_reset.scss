@@ -1,4 +1,4 @@
-@charset 'utf-8';
+@charset "utf-8";
 
 html {
     font-size: 14px;
@@ -36,6 +36,8 @@ i{
   font-style: normal;
 }
 
+a { text-decoration:none; }
+a:hover,a:focus{text-decoration: none;}
 
 body,
 p,
@@ -175,21 +177,25 @@ input[type=number]::-webkit-outer-spin-button {
 input::-webkit-input-placeholder,
 textarea::-webkit-input-placeholder {
     color: #CED0D2;
+    font-size: 12px;
 }
 
 input:-moz-placeholder,
 textarea:-moz-placeholder {
     color: #CED0D2;
+    font-size: 12px;
 }
 
 input::-moz-placeholder,
 textarea::-moz-placeholder {
     color: #CED0D2;
+    font-size: 12px;
 }
 
 input:-ms-input-placeholder,
 textarea:-ms-input-placeholder {
     color: #CED0D2;
+    font-size: 12px;
 }
 
 

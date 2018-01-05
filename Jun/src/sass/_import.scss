@@ -1,0 +1,148 @@
+@charset "utf-8";
+.import{
+	position: absolute;
+	background-color: #ffffff;
+	width: 892px;
+	border-radius:8px;
+	padding: 0 15px 50px 15px;
+	clear: both;
+	overflow: hidden;
+	opacity: 1;
+	left: 50%;
+	margin-left: -446px;
+	margin-top:110px;
+	h3{
+		font-size: 22px;
+		color: #3A3A3A;
+		text-align: left;
+	}
+	.main-import{
+		padding: 30px 0px 10px 40px;
+		height: 350px;
+		overflow: auto;
+		margin-top: 15px;
+		.name{
+			color: #606E83;
+			font-size: 16px;
+		}
+		.btn-main{
+			overflow: hidden;
+			clear: both;
+			margin: 12px 0 42px 0;
+			.btn-watch{
+				width: 402px;
+				float: left;
+				.input-file{
+					line-height: 34px;
+					height: 34px;
+				}
+				button{
+					line-height: 34px;
+					height: 34px;
+				}
+			}
+		}
+		.step{
+			margin-top: 20px;
+			li{
+				float: left;
+				width: 260px;
+				text-align: center;
+				background: url(../images/heng-gray.png)no-repeat 0 150px;
+				background-size: 260px 12px;
+				i{
+					width: 102px;
+					height: 102px;
+					display: inline-block;
+					background: url(../images/step.png)no-repeat;
+					background-size: 100%;
+					border-radius: 50%;
+					overflow: hidden;
+					color: #D9D9D9;
+					font-size: 42px;
+					line-height: 102px;
+					font-weight: bold;
+				}
+				span{
+					width: 158px;
+					height: 47px;
+					display: inline-block;
+					background: url(../images/btn-bg-gray.png)no-repeat;
+					background-size: 100%;
+					margin-top: 25px;
+					font-size: 16px;
+					color: #BDBDBD;
+					line-height: 47px;
+				}
+				&.first{
+					background-size: 50% 12px;
+					background-position: right 150px;
+				}
+				&.last{
+					background-size: 50% 12px;
+					background-position: left 150px;
+				}
+				&.step-hover{
+					i{
+						background: url(../images/step_hover.png)no-repeat;
+						color: #F6F9FB;
+					}
+					span{
+						background: url(../images/btn-bg-green.png)no-repeat;
+						color: #F6F9FB;
+					}
+				}
+			}
+		}
+		.num-ul{
+			clear: both;
+			overflow: hidden;
+			padding-top: 64px;
+			display: inline-block;
+			li{
+				float: left;
+				display: inline-block;
+				padding: 0;
+				height: 36px;
+				color: #606E83;
+				margin-right: 40px;
+				span{
+					display: inline-block;
+					height: 36px;
+					padding: 0px;
+					vertical-align: middle;
+					&.num-big{
+						line-height: 36px;
+						font-size: 36px;
+					}
+					&.span-block{
+						max-width: 110px;
+						p{
+							padding-left: 15px;
+							line-height: 16px;
+							height: 16px;
+							font-size: 12px;
+							float: left;
+							&.tit-step{
+								font-size:16px;
+							}
+						}
+					}
+				}
+				&.success{
+					color: #5BD98D;
+				}
+				&.failure{
+					color: #EB4861;
+				}
+			}
+		}
+		.result{
+			margin-top: 64px;
+			a{
+				background: #53A4F5;
+				color: #ffffff;
+			}
+		}
+	}
+}

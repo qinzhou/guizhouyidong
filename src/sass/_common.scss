@@ -1,0 +1,23 @@
+.c-wrap{
+    position: relative;
+    height: 100%;
+}
+.c-main{
+    height: 100%;
+    padding-top: 80px;
+    &.close{
+    	.sidebar{
+    		display: none;
+    	}
+    	.content{
+    		margin-left: 0px;
+    	}
+    }
+}
+.content{
+    margin-left: 230px;
+    padding : 30px 20px;
+    height: 100%;
+    overflow: auto;
+    background-color: #F6F9FB;
+}

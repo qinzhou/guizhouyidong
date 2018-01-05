@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>员工收入证明管理</title>
+  <link rel="stylesheet" href="../css/bootstrap.min.css" />
+  <link rel="stylesheet" href="../css/dcalendar.picker.css" />
+  <link rel="stylesheet" href="../css/style.css" />
+</head>
+<body>
+  <div class="c-wrap earning">
+    <div class="header">
+    	<i class="icon-book"></i>
+    	<i class="icon-close"></i>
+    	<h1 class="title">员工收入证明管理</h1>
+    </div>
+    <div class="c-main" id="main">
+    	<div class="sidebar">
+    		<h2 class="organize"><i class="arrow icon-arrow-left" id="shrink"></i>组织机构</h2>
+    		<h3 class="subtitle">全部</h3>
+    		<div id="treeview" class="treeview"></div>
+    	</div>
+    	<div class="content">
+    		<div class="searchbar">
+    			<h4 class="searchbar-title"><i id="open" class="icon-arrow-right"></i>搜索条件</h4>
+    			<ul class="input-list c">
+    				<li class="item">
+    					<label class="label-name">需求汇总人</label>
+    					<div class="input-wrap">
+    						<input class="search-input" type="text" placeholder="请输入员工姓名" />
+    					</div>
+    				</li>
+    				<li class="item">
+    					<label class="label-name">申请状态</label>
+    					<div class="input-wrap c" id="select-wrap">
+    						<input class="select-input" id="select" type="text" placeholder="全部" />
+    						<label class="icon-wrap">
+    							<i class="icon-arrow-down"></i>
+    						</label>
+    						<ul class="select-list" id="select-list">
+    							<li>选项1</li>
+    							<li>选项2</li>
+    						</ul>
+    					</div>
+
+    				</li>
+    			</ul>
+    			<ul class="input-list c">
+    				<li class="item">
+    					<label class="label-name">申请时间</label>
+    					<div class="input-wrap c">
+    						<label class="icon-wrap">
+    							<i class="icon-date"></i>
+    						</label>
+    						<input id="mydatepicker" class="select-input" type="text" placeholder="全部" />
+    						
+    					</div>
+    				</li>
+    				<li class="item">
+    					<label class="label-name">至</label>
+    					<div class="input-wrap c">
+    						<label class="icon-wrap">
+    							<i class="icon-date"></i>
+    						</label>
+    						<input id="mydatepicker2" class="select-input" type="text" placeholder="全部" />
+    						
+    					</div>
+    				</li>
+    				<li class="btn-group-right">
+    					<div class="btn-reset">重置</div>
+    					<div class="btn-search">查询</div>
+    				</li>
+    			</ul>
+    		</div>
+    		<div class="table-result">
+    			<h4>全部结果</h4>
+    			<span>共134份</span>
+    		</div>
+    		<table class="table" id="table">
+    			<thead>
+	    			<tr>
+	    				<th>序号</th>
+	    				<th>申请人</th>
+	    				<th>申请状态</th>
+	    				<th>申请时间</th>
+	    				<th>申请收入证明类型</th>
+	    				<th>申请原因</th>
+	    				<th>操作</th>
+	    				<th class="check-wrap">全选<i class="icon-uncheck"></i></th>
+	    			</tr>
+    			</thead>
+    			<tbody>
+    				<tr>
+    					<td>1</td>
+    					<td>张三</td>
+    					<td>已提交</td>
+    					<td>2017-04-28／12:30</td>
+    					<td>月收入证明</td>
+    					<td>办理信用卡</td>
+    					<td class="more-wrap"><i class="icon-more"></i></td>
+    					<td class="check-wrap"><i class="icon-uncheck icon-checked"></i></td>
+    				</tr>
+    				<tr>
+    					<td>1</td>
+    					<td>张三</td>
+    					<td>已提交</td>
+    					<td>2017-04-28／12:30</td>
+    					<td>月收入证明</td>
+    					<td>办理信用卡</td>
+    					<td class="more-wrap"><i class="icon-more"></i></td>
+    					<td class="check-wrap"><i class="icon-uncheck icon-checked"></i></td>
+    				</tr>
+    				<tr>
+    					<td>1</td>
+    					<td>张三</td>
+    					<td>已提交</td>
+    					<td>2017-04-28／12:30</td>
+    					<td>月收入证明</td>
+    					<td>办理信用卡</td>
+    					<td class="more-wrap"><i class="icon-more"></i></td>
+    					<td class="check-wrap"><i class="icon-uncheck"></i></td>
+    				</tr>
+    				<tr>
+    					<td>1</td>
+    					<td>张三</td>
+    					<td>已提交</td>
+    					<td>2017-04-28／12:30</td>
+    					<td>月收入证明</td>
+    					<td>办理信用卡</td>
+    					<td class="more-wrap"><i class="icon-more"></i></td>
+    					<td class="check-wrap"><i class="icon-uncheck"></i></td>
+    				</tr>
+    			</tbody>
+    		</table>
+    		<ul class="table-menus" id="table-menus">
+    			<li class="item">
+    				<i class="icon-edit"></i>
+    				<span>修改</span>
+    			</li>
+    			<li class="item">
+    				<i class="icon-delete"></i>
+    				<span>删除</span>
+    			</li>
+    			<li class="item">
+    				<i class="icon-stop"></i>
+    				<span>停用</span>
+    			</li>
+    			<li class="item">
+    				<i class="icon-move-down"></i>
+    				<span>下移</span>
+    			</li>
+    			<li class="item">
+    				<i class="icon-look"></i>
+    				<span>查看</span>
+    			</li>
+    			<li class="item">
+    				<i class="icon-job"></i>
+    				<span>职位列表</span>
+    			</li>
+    			<li class="item">
+    				<i class="icon-upload"></i>
+    				<span>上传说明书</span>
+    			</li>
+    		</ul>
+    	</div>
+    </div>
+  </div>
+<script src="../js/lib/jquery-1.11.3.min.js"></script>
+<script src="../js/lib/jstree.min.js"></script>
+<script src="../js/lib/dcalendar.picker.js"></script>
+
+<script>
+$(function () {
+	$('#mydatepicker').dcalendarpicker({
+		format:'yyyy-mm-dd'
+	});
+	$('#mydatepicker2').dcalendarpicker({
+			format:'yyyy-mm-dd'
+	}); 
+
+	$('#treeview').jstree({
+	    'core' : {
+	      'data' : [
+	        {   "text" : "贵州移动",
+	        	"state" : {"opened" : true },
+	         	"children" : [
+		            { "text" : "省本部",
+		              "children" : [
+		              	  {
+		              	  	"text" : "本部1"
+		              	  },
+		              	  {
+		              	  	"text" : "本部2"
+		              	  },
+		              ]	
+		        	},
+		            { "text" : "贵阳分公司",
+		            	"children" : [
+		            		{
+		            			"text" : "分公司1"
+		            		}
+		            	] 
+		        	},
+		            { "text" : "遵义分公司" },
+		            { "text" : "安顺分公司" },
+		            { "text" : "黔南分公司" },
+		            { "text" : "黔东南分公司" },
+		            { "text" : "铜仁分公司" },
+		            { "text" : "毕节分公司" },
+		            { "text" : "六盘水分公司" },
+		            { "text" : "黔西南分公司" },
+		            { "text" : "中移通信技术工程" },
+		            { "text" : "政企客户分公司" },
+	          ]
+	        }
+	      ]
+	    }
+	  }).on("changed.jstree", function (e, data) {
+		  console.log(data.instance.get_selected(true)[0].text);
+		  // console.log(data.instance.get_node(data.selected[0]).text);
+	    });
+
+	  var $tableMenus = $('#table-menus'),
+	  	  menuHight = $tableMenus.height();
+	  var $table = $('#table');
+	  var $win = $(window),
+	  	  wHeight = $win.height();
+	  var maxTop = wHeight - menuHight;
+	  $table.on('click','.more-wrap',function(){
+
+	  	var offset = $(this).find('.icon-more').offset();
+	  	offset.left -= 100; 
+	  	offset.top += 20; 
+	    offset.top =  offset.top > maxTop ? maxTop : offset.top;
+	  	$tableMenus.css(offset).toggle();
+	  }).find('tbody').on('click','.icon-uncheck',function () {
+	  	$(this).toggleClass('icon-checked');
+	  });
+
+	  $tableMenus.on('click','.item',function(){
+	  	$tableMenus.hide();
+	  });
+	  var $open = $('#open');
+	  $('#shrink').on('click',function () {
+	  	$('#main').addClass('close');
+	  	 $open.css({
+	  	 	display : 'inline-block'
+	  	 });
+	  });
+
+	  $open.on('click',function () {
+	  	$('#main').removeClass('close');
+	  	$open.hide();
+	  });
+
+	  var $selectList = $('#select-list');
+	  $('#select-wrap').on('click',function () {
+	  	$selectList.show();
+	  })
+	  $selectList.on('click','li',function (e) {
+	  	$selectList.hide();
+	  	e.stopPropagation();
+	  	$('#select').val($(this).text());
+	  });
+})
+</script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+

@@ -5,10 +5,11 @@
   <title>员工收入证明管理</title>
   <link rel="stylesheet" href="../css/bootstrap.min.css" />
   <link rel="stylesheet" href="../css/dcalendar.picker.css" />
+  <link rel="stylesheet" href="../js/webuploader/webuploader.css" />
   <link rel="stylesheet" href="../css/style.css" />
 </head>
 <body>
-  <div class="c-wrap earning">
+<div class="c-wrap earning">
     <div class="header">
     	<i class="icon-book"></i>
     	<i class="icon-close"></i>
@@ -130,6 +131,40 @@
     					<td class="more-wrap"><i class="icon-more"></i></td>
     					<td class="check-wrap"><i class="icon-uncheck"></i></td>
     				</tr>
+                    <tr>
+                        <td colspan="8">
+                            <!-- 页码 -->
+                            <div class="page page-margin">
+                                <ul>
+                                    <!-- 空 -->
+                                    <li>
+                                        <a href="javascript:;" class="cursor-text">
+                                            <i></i>
+                                        </a>
+                                    </li>
+                                    <!-- 上一页 -->
+                                    <!-- <li>
+                                        <a href="javascript:;">
+                                            <i class="icon-before"></i>
+                                        </a>
+                                    </li> -->
+                                    <li><a href="javascript:;" class="hover">1</a></li>
+                                    <li><a href="javascript:;">2</a></li>
+                                    <li><a href="javascript:;">3</a></li>
+                                    <li><a href="javascript:;">4</a></li>
+                                    <li><a href="javascript:;">5</a></li>
+                                    <!-- 下一页 -->
+                                    <li>
+                                        <a href="javascript:;">
+                                            <i class="icon-next"></i>
+                                        </a>
+                                    </li>
+                                </ul>
+                                <span class="num">第<input type="text">页</span>
+                                <button>确认</button>
+                            </div>
+                        </td>
+                    </tr>
     			</tbody>
     		</table>
     		<ul class="table-menus" id="table-menus">
@@ -164,11 +199,237 @@
     		</ul>
     	</div>
     </div>
-  </div>
+</div>
+<!-- 信息弹窗 -->
+<div class="body-alert" style="display:none;">
+    <div class="alert-page">
+
+        <!-- 红色错误信息弹窗 -->
+       <!--  <div class="main">
+            <i class="icon-close-white"></i>
+            <i class="icon-wrong"></i>
+            <h3>错误信息</h3>
+            <p>第一条无法上移，请重新选择</p>
+            <button class="btn-red">确认</button>
+        </div> -->
+
+        <!-- 黄色警告信息 -->
+        <!-- <div class="main">
+            <i class="icon-close-white"></i>
+            <i class="icon-warm"></i>
+            <h3>警告信息</h3>
+            <p>请选择需要启用的组织</p>
+            <button class="btn-yellow">确认</button>
+        </div> -->
+
+        <!-- 蓝色警告信息 -->
+        <!-- <div class="main">
+            <i class="icon-close-white"></i>
+            <i class="icon-help"></i>
+            <h3>警告信息</h3>
+            <p>请选择需要启用的组织</p>
+            <button class="btn-blue">确认</button>
+        </div> -->
+        
+
+        <!-- 新增组织信息弹窗 -->
+        <!-- <div class="add-org">
+            <h3 class="title-public">
+                新增组织消息
+                <i class="icon-close-white fr"></i>
+            </h3>
+            <form action="">
+                <div class="content-form">
+                    <div class="input-row">
+                        <div class="input-colum">
+                            <span>上级组织编码</span>
+                            <span class="code">20171220BSEAL29876</span>
+                        </div>
+                        <div class="input-colum">
+                            <span>上级组织编码</span>
+                            <span class="code">根组织结构</span>
+                        </div>
+                    </div>
+                    <div class="input-row">
+                        <div class="input-colum">
+                            <span><i>*</i>组织编码</span>
+                            <input type="text">
+                        </div>
+                        <div class="input-colum">
+                            <span><i>*</i>组织名称</span>
+                            <input type="text">
+                        </div>
+                    </div>
+                    <div class="input-row">
+                        <div class="input-colum">
+                            <span><i>*</i>组织简称</span>
+                            <input type="text">
+                        </div>
+                        <div class="input-colum">
+                            <span><i>*</i>组织属性</span>
+                            <input type="text">
+                        </div>
+                    </div>
+                    <div class="input-row">
+                        <div class="input-colum">
+                            <span><i>*</i>组织层级</span>
+                            <select name="" id="">
+                                <option value=""></option>
+                                <option value="1">第一级</option>
+                                <option value="2">第二级</option>
+                            </select>
+                        </div>
+                        <div class="input-colum">
+                            <span><i>*</i>组织类型</span>
+                            <select name="" id="">
+                                <option value=""></option>
+                                <option value="1">第一级</option>
+                                <option value="2">第二级</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="input-row">
+                        <div class="input-colum">
+                            <span><i>*</i>组织分类</span>
+                            <select name="" id="">
+                                <option value=""></option>
+                                <option value="1">第一级</option>
+                                <option value="2">第二级</option>
+                            </select>
+                        </div>
+                        <div class="input-colum">
+                            <span><i>*</i>业务口</span>
+                            <select name="" id="">
+                                <option value=""></option>
+                                <option value="1">第一级</option>
+                                <option value="2">第二级</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="input-row">
+                        <div class="input-colum">
+                            <span>有效起始日期</span>
+                            <input type="text" id="mydatepicker3" class="date-pic">
+                        </div>
+                        <div class="input-colum">
+                            <span>有效终止日期</span>
+                            <input type="text" id="mydatepicker4" class="date-pic">
+                        </div>
+                    </div>
+                    <div class="input-row">
+                        <div class="input-colum">
+                            <span>是否源自HRMIS</span>
+                            <label for="radio-pic" class="radio-pic">
+                                <input type="checkbox" id="radio-pic" checked="checked">
+                            </label>
+                            否
+                        </div>
+                        <div class="input-colum">
+                            <span><i>*</i>状态</span>
+                            <select name="" id="">
+                                <option value=""></option>
+                                <option value="1">第一级</option>
+                                <option value="2">第二级</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="input-row">
+                        <div class="input-colum input-all">
+                            <span class="span-text">组织编码</span>
+                            <textarea name="" id="" cols="30" rows="10"></textarea>
+                        </div>
+                    </div>
+                    <div class="input-row">
+                        <div class="input-colum input-all">
+                            <span class="span-text">备注</span>
+                            <textarea name="" id="" cols="30" rows="10"></textarea>
+                        </div>
+                    </div>
+                    <div class="input-row">
+                        <div class="input-colum input-all btn-watch" id="uploader">
+                            <span>是否源自HRMIS</span>
+                            <label for="inpf" class="input-file"></label>
+                            <button id="picker">浏览</button>
+                        </div>
+                    </div>
+                    <div class="input-row">
+                        <div class="input-colum input-all">
+                            <span>&nbsp;</span>
+                            <p>上传文件的后缀名应为：doc,docx,txt,文件大小不超过10MB</p>
+                        </div>
+                    </div>
+                </div>
+            </form>
+        </div> -->
+
+        <!-- 导入员工信息弹窗 -->
+        <div class="import">
+            <h3 class="title-public">
+                导入员工信息
+                <i class="icon-close-white fr"></i>
+            </h3>
+            <div class="main-import">
+                <p class="name">选择文件</p>
+                <div class="btn-main">
+                    <div class="btn-watch" id="uploader">
+                        <label for="inpf" class="input-file"></label>
+                        <button id="picker">浏览</button>
+                    </div>
+                    <div class="a-btn-list">
+                        <a href="javascript:;" class="a-gray" id="ctlBtn">开始导入</a>
+                        <a href="javascript:;">下载模板</a>
+                    </div>
+                </div>
+                <p class="name">系统处理进度</p>
+                <ul class="step">
+                    <li class="first step-hover">
+                        <i>1</i>
+                        <span>数据检验</span>
+                    </li>
+                    <li class="step-hover">
+                        <i>2</i>
+                        <span>数据导入</span>
+                    </li>
+                    <li class="last">
+                        <i>3</i>
+                        <span>操作完成</span>
+                    </li>
+                </ul>
+                <ul class="num-ul">
+                    <li>
+                        <span class="num-big">0</span>
+                        <span class="span-block">
+                            <p class="tit-step">总行数</p>
+                            <p>total number</p>
+                        </span>
+                    </li>
+                    <li class="success">
+                        <span class="num-big">0</span>
+                        <span class="span-block">
+                            <p class="tit-step">成功数</p>
+                            <p>success number</p>
+                        </span>
+                    </li>
+                    <li class="failure">
+                        <span class="num-big">0</span>
+                        <span class="span-block">
+                            <p class="tit-step">失败数</p>
+                            <p>failure number</p>
+                        </span>
+                    </li>
+                </ul>
+                <div class="a-btn-list result">
+                    <a href="javascript:;">下载结果</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
 <script src="../js/lib/jquery-1.11.3.min.js"></script>
 <script src="../js/lib/jstree.min.js"></script>
 <script src="../js/lib/dcalendar.picker.js"></script>
-
+<script  src="../js/webuploader/webuploader.js"></script>
 <script>
 $(function () {
 	$('#mydatepicker').dcalendarpicker({
@@ -177,7 +438,12 @@ $(function () {
 	$('#mydatepicker2').dcalendarpicker({
 			format:'yyyy-mm-dd'
 	}); 
-
+    $('#mydatepicker3').dcalendarpicker({
+            format:'yyyy-mm-dd'
+    }); 
+    $('#mydatepicker4').dcalendarpicker({
+            format:'yyyy-mm-dd'
+    }); 
 	$('#treeview').jstree({
 	    'core' : {
 	      'data' : [
@@ -262,6 +528,83 @@ $(function () {
 	  	e.stopPropagation();
 	  	$('#select').val($(this).text());
 	  });
+
+
+    //关闭信息提示弹窗
+    $(".icon-close-white").click(function(){
+        $(".body-alert").fadeOut();
+    })
+
+    // 新增组织信息弹窗中必填项失去焦点后的样式操作
+    $(".add-org input,.add-org select").each(function(){
+        $(this).blur(function(){
+            if($(this).parent(".input-colum").find("i").length>0 && ($(this).val()=="" || $(this).val()==null)){
+                if(!$(this).parent(".input-colum").hasClass("must")){
+                    $(this).parent(".input-colum").append("<p class='must'>此为必填项</p>");
+                    $(this).hide();
+                }
+                $(".add-org .must").click(function(){
+                    $(this).parent(".input-colum").find("input,select").show().focus();
+                    $(this).remove();
+                })
+            }
+        })
+    })
+
+
+    // 文件上传
+    var uploader = WebUploader.create({
+
+        // swf文件路径
+        swf: '../js/webuploader/Uploader.swf',
+
+        // 文件接收服务端。
+        server: 'http://webuploader.duapp.com/server/fileupload.php',
+
+        // 选择文件的按钮。可选。
+        // 内部根据当前运行是创建，可能是input元素，也可能是flash.
+        pick: '#picker',
+
+        // 不压缩image, 默认如果是jpeg，文件上传前会压缩一把再上传！
+        resize: false
+    });
+
+    // 当有文件被添加进队列的时候
+    uploader.on( 'fileQueued', function( file ) {
+        $(".input-file").append('<span style="width:auto;" id="'+file.id+'">'+file.name+'&nbsp;&nbsp;</span>');
+
+    });
+
+    // 文件上传过程中创建进度条实时显示。
+    uploader.on( 'uploadProgress', function( file, percentage ) {
+        var $li = $( '#'+file.id ),
+            $percent = $li.find('.progress .progress-bar');
+
+        // 避免重复创建
+        if ( !$percent.length ) {
+            $percent = $('<div class="progress progress-striped active">' +
+              '<div class="progress-bar" role="progressbar" style="width: 0%">' +
+              '</div>' +
+            '</div>').appendTo( $li ).find('.progress-bar');
+        }
+
+        $li.find('p.state').text('上传中');
+
+        $percent.css( 'width', percentage * 100 + '%' );
+    });
+
+    // 文件成功、失败处理
+    uploader.on( 'uploadSuccess', function( file ) {
+        $( '#'+file.id ).find('p.state').text('已上传');
+    });
+
+    uploader.on( 'uploadError', function( file ) {
+        $( '#'+file.id ).find('p.state').text('上传出错');
+    });
+
+    uploader.on( 'uploadComplete', function( file ) {
+        $( '#'+file.id ).find('.progress').fadeOut();
+    });
 })
 </script>
 </body>

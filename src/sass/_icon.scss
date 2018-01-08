@@ -55,4 +55,46 @@
 
 
 
+.icon-close-white{
+   @include bg(16px,16px,'icon_tc_close');
+   float: right;
+}
+.icon-web{
+   @include bg(12px,14px,'icon-web');
+   margin-right: 12px;
+}
+.icon-next{
+   @include bg(24x,24px,'icon_whit_left');
+   background-size: 6px 10px;
+   background-color: #53A4F5;
+   border:1px solid #53A4F5!important;
+}
+.icon-before{
+   @include bg(24x,24px,'icon_whit_right');
+   background-size: 6px 10px;
+   background-color: #53A4F5;
+   border:1px solid #53A4F5!important;
+}
+.icon-warm{
+   @include bg(64x,64px,'icon_aleart');
+   width: 100%;
+}
+.icon-help{
+   @include bg(64x,64px,'icon_que');
+   width: 100%;
+}
+.icon-wrong{
+   @include bg(60x,60px,'icon_eero');
+   width: 100%;
+}
+.icon-phone{
+   @include bg(20x,20px,'icon_phone');
+}
+.icon-call{
+   @include bg(20x,20px,'icon_phone1');
+}
+.icon-email{
+   @include bg(20x,20px,'icon_email');
+}
+
 

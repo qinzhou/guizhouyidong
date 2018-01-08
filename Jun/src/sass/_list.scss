@@ -1,0 +1,36 @@
+.list-page{
+	padding: 80px 40px 40px 40px;
+	.content-p{
+		background: #ffffff;
+		margin-top: 40px;
+		border: 1px solid #DEDEDE;
+		text-align: center;
+		.ul-title{
+			padding: 0 0 0 44px;
+			text-align: left;
+			li{
+				border-bottom: 1px solid #E8EDF1;
+				line-height: 48px;
+				a{
+					font-size: 14px;
+					color: #262626;
+					display: block;
+					position: relative;
+					padding-right: 120px;
+					width: 100%;
+					white-space: nowrap;
+					overflow: hidden;
+					text-overflow:ellipsis;
+					span{
+						position: absolute;
+						right: 0;
+						margin-right: 24px;
+					}
+					&:hover{
+						background: #F6F9FB;
+					}
+				}
+			}
+		}
+	}
+}

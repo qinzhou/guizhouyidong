@@ -8,7 +8,7 @@
   <link rel="stylesheet" href="../css/style.css" />
 </head>
 <body>
-  <div class="c-wrap mail-list">
+<div class="c-wrap mail-list">
     <div class="header">
     	<i class="icon-book"></i>
     	<i class="icon-close"></i>
@@ -66,7 +66,40 @@
     					<td>chencl@cmccgz.net</td>
     					<td><span  class="show-detail">查看</span></td>
     				</tr>
-    				
+    				<tr>
+    					<td colspan="6">
+    						<!-- 页码 -->
+                            <div class="page page-margin">
+                                <ul>
+                                    <!-- 空 -->
+                                    <li>
+                                        <a href="javascript:;" class="cursor-text">
+                                            <i></i>
+                                        </a>
+                                    </li>
+                                    <!-- 上一页 -->
+                                    <!-- <li>
+                                        <a href="javascript:;">
+                                            <i class="icon-before"></i>
+                                        </a>
+                                    </li> -->
+                                    <li><a href="javascript:;" class="hover">1</a></li>
+                                    <li><a href="javascript:;">2</a></li>
+                                    <li><a href="javascript:;">3</a></li>
+                                    <li><a href="javascript:;">4</a></li>
+                                    <li><a href="javascript:;">5</a></li>
+                                    <!-- 下一页 -->
+                                    <li>
+                                        <a href="javascript:;">
+                                            <i class="icon-next"></i>
+                                        </a>
+                                    </li>
+                                </ul>
+                                <span class="num">第<input type="text">页</span>
+                                <button>确认</button>
+                            </div>
+    					</td>
+    				</tr>
     				
     			</tbody>
     		</table>
@@ -76,7 +109,55 @@
     		</div>
     	</div>
     </div>
-  </div>
+</div>
+<!-- 员工信息详情弹窗 -->
+<div class="body-alert" style="display:none;">
+	<div class="alert-page">
+		<!-- 主体内容 -->
+		<div class="main-detail">
+			<!-- 标题 -->
+			<h3 class="title-public">
+				员工信息详情
+				<i class="icon-close-white fr"></i>
+			</h3>
+			<div class="content-p">
+				<!-- 左边个人介绍模块 -->
+				<div class="left-side">
+					<div class="img">
+						<img src="../images/01.jpg" alt="">
+					</div>
+					<h3>陈翠岭</h3>
+					<p class="rank"><span>5级</span></p>
+					<p class="job">级员工关系专员</p>
+					<p class="place">人力资源部-员工关系室</p>
+				</div>
+				<!-- 右边联系方式模块 -->
+				<div class="right-side">
+					<ul>
+						<li>
+							<i class="icon-phone"></i>
+							<span class="type">手机号码</span>
+							<span>13908767655</span>
+							<button>点击复制</button>
+						</li>
+						<li>
+							<i class="icon-call"></i>
+							<span class="type">座机号码</span>
+							<span>0851-76567867</span>
+							<button>点击复制</button>
+						</li>
+						<li>
+							<i class="icon-email"></i>
+							<span class="type">邮箱账号</span>
+							<span>huangming@cmccgy.net</span>
+							<button>点击复制</button>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
 <script src="../js/lib/jquery-1.11.3.min.js"></script>
 <script src="../js/lib/jstree.min.js"></script>
 
@@ -144,6 +225,15 @@ $(function () {
 	  	$('#main').removeClass('close');
 	  	$open.hide();
 	  });*/
+	
+	// 打开员工信息详情弹窗
+	$(".show-detail").click(function(){
+		$(".body-alert").fadeIn();
+	})
+	$(".icon-close-white").click(function(){
+		$(".body-alert").fadeOut();
+	})
+
 })
 </script>
 </body>

@@ -563,6 +563,12 @@ select::-ms-expand {
     background-color: #000;
     filter: Alpha(opacity=60); }
 
+.pageDiv {
+  text-align: center;
+  background: #ffffff;
+  border: 1px solid #e1e1e1;
+  border-top: 0; }
+
 /*分页样式*/
 .page {
   display: inline-block;
@@ -618,7 +624,7 @@ select::-ms-expand {
       background-color: #4e84bb; }
 
 .page-margin {
-  margin: 16px 0; }
+  margin: 30px 0; }
 
 .icon-close-white {
   cursor: pointer; }

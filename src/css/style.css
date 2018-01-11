@@ -12,7 +12,8 @@ body, .wrap {
   font-size: 18px; }
 
 *, html * {
-  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+       box-sizing: border-box;
   font-family: "Microsoft Yahei"; }
 
 .wrap {
@@ -59,7 +60,6 @@ form {
 input,
 select,
 textarea {
-  -webkit-box-sizing: content-box;
   -moz-box-sizing: content-box;
   box-sizing: content-box;
   outline: none; }
@@ -193,13 +193,11 @@ template {
   position: relative;
   top: 50%;
   -webkit-transform: -webkit-translateY(-50%);
-  -moz-transform: -moz-translateY(-50%);
-  -o-transform: -o-translateY(-50%);
-  transform: translateY(-50%); }
+  -ms-transform: translateY(-50%);
+      transform: translateY(-50%); }
 
 /*元素计算宽高德盒子模型以`border`为外界限，原子类*/
 .bb {
-  -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box; }
 
@@ -433,7 +431,7 @@ select::-ms-expand {
   background-color: transparent;
   background-size: 6px 10px;
   background-color: #53A4F5;
-  border: 1px solid #53a4f5 !important; }
+  border: 1px solid #53A4F5 !important; }
 
 .icon-before {
   display: inline-block;
@@ -446,7 +444,7 @@ select::-ms-expand {
   background-color: transparent;
   background-size: 6px 10px;
   background-color: #53A4F5;
-  border: 1px solid #53a4f5 !important; }
+  border: 1px solid #53A4F5 !important; }
 
 .icon-warm {
   display: inline-block;
@@ -679,7 +677,7 @@ select::-ms-expand {
   margin-left: 143px;
   width: 350px;
   border: 1px solid #EC4F67;
-  color: #ec4f67 !important;
+  color: #EC4F67 !important;
   padding: 0 10px;
   line-height: 30px;
   height: 30px;
@@ -702,8 +700,9 @@ select::-ms-expand {
   float: none !important;
   font-size: 10px !important;
   margin-right: 0 !important; }
+
 .calendar .date span {
-  color: black !important; }
+  color: #000000 !important; }
 
 .header {
   position: absolute;
@@ -713,7 +712,7 @@ select::-ms-expand {
   height: 80px;
   color: #fff;
   padding: 26px 26px;
-  background-color: #53a4f5;
+  background-color: #53A4F5;
   overflow: hidden; }
   .header .icon-book {
     float: left; }
@@ -731,11 +730,11 @@ select::-ms-expand {
   float: left;
   width: 230px;
   height: 100%;
-  border-right: 1px solid #e1e1e1; }
+  border-right: 1px solid #E1E1E1; }
   .sidebar .organize {
     padding: 20px;
     font-size: 20px;
-    color: #3a3a3a; }
+    color: #3A3A3A; }
     .sidebar .organize .arrow {
       float: right;
       margin-top: 10px;
@@ -743,33 +742,38 @@ select::-ms-expand {
   .sidebar .subtitle {
     padding: 20px;
     font-size: 18px;
-    color: #3a3a3a;
-    border-top: 1px solid #e1e1e1;
-    border-bottom: 1px solid #e1e1e1; }
+    color: #3A3A3A;
+    border-top: 1px solid #E1E1E1;
+    border-bottom: 1px solid #E1E1E1; }
   .sidebar .treeview {
-    color: #3a3a3a;
+    color: #3A3A3A;
     font-size: 14px; }
   .sidebar .jstree-default .jstree-themeicon {
     display: none !important; }
 
 .searchbar .search-input-wrap {
   height: 40px; }
+
 .searchbar .icon-arrow-right {
   cursor: pointer;
   display: none;
   margin-right: 20px;
   width: 16px;
   height: 16px; }
+
 .searchbar .searchbar-title {
   font-size: 22px;
   color: #333333; }
+
 .searchbar .input-list {
   display: inline-block;
   vertical-align: middle;
   margin-top: 24px; }
+
 .searchbar .item {
   float: left;
   margin-right: 55px; }
+
 .searchbar .select-list {
   display: none;
   position: absolute;
@@ -778,15 +782,16 @@ select::-ms-expand {
   z-index: 10;
   width: 100%;
   background-color: #fff;
-  border-left: 1px solid #e1e1e1;
-  border-right: 1px solid #e1e1e1; }
+  border-left: 1px solid #E1E1E1;
+  border-right: 1px solid #E1E1E1; }
   .searchbar .select-list li {
     padding: 10px;
     font-size: 14px;
     color: #333333;
-    border-bottom: 1px solid #e1e1e1; }
+    border-bottom: 1px solid #E1E1E1; }
     .searchbar .select-list li:hover {
       background-color: #f1f1f1; }
+
 .searchbar .label-name {
   display: inline-block;
   vertical-align: middle;
@@ -794,20 +799,23 @@ select::-ms-expand {
   color: #333333;
   margin-right: 10px;
   min-width: 70px; }
+
 .searchbar .input-wrap {
   position: relative;
   display: inline-block;
   vertical-align: middle;
   width: 200px;
   height: 38px;
-  border: 1px solid #e1e1e1;
+  border: 1px solid #E1E1E1;
   border-radius: 4px;
   background-color: #fff; }
+
 .searchbar .search-input {
   width: 100%;
   height: 100%;
   text-indent: 4px;
   float: left; }
+
 .searchbar .select-input {
   width: 160px;
   height: 100%;
@@ -815,18 +823,21 @@ select::-ms-expand {
   float: left;
   font-size: 14px;
   line-height: 38px; }
+
 .searchbar .icon-wrap {
   float: right;
   width: 38px;
   height: 38px;
   text-align: center;
   line-height: 38px;
-  border-left: 1px solid #e1e1e1;
+  border-left: 1px solid #E1E1E1;
   cursor: pointer; }
   .searchbar .icon-wrap i {
     vertical-align: middle; }
+
 .searchbar .btn-group-right {
   float: right; }
+
 .searchbar .btn-reset, .searchbar .btn-search {
   display: inline-block;
   vertical-align: middle;
@@ -837,30 +848,35 @@ select::-ms-expand {
   text-align: center;
   line-height: 38px;
   cursor: pointer; }
+
 .searchbar .btn-reset {
-  color: #53a4f5; }
+  color: #53A4F5; }
+
 .searchbar .btn-search {
-  background-color: #53a4f5;
+  background-color: #53A4F5;
   color: #fff;
   margin-left: 10px; }
+
 .searchbar .datepicker {
   position: static !important;
   height: 100%;
   display: block !important; }
+
 .searchbar .search-btn {
   float: right;
-  background-color: #53a4f5;
+  background-color: #53A4F5;
   color: #fff;
   font-size: 16px;
   padding: 14px 30px;
   cursor: pointer;
   border-radius: 5px; }
+
 .searchbar .search-area {
   width: 80%;
   float: left;
   background: #fff;
   border-radius: 5px;
-  border: 1px solid #e1e1e1;
+  border: 1px solid #E1E1E1;
   height: 48px;
   line-height: 48px;
   text-indent: 10px; }
@@ -881,7 +897,7 @@ select::-ms-expand {
 
 .table {
   width: 100%;
-  border: 1px solid #e1e1e1; }
+  border: 1px solid #E1E1E1; }
   .table thead {
     background: #E5EEF6; }
     .table thead i {
@@ -894,7 +910,7 @@ select::-ms-expand {
     padding: 14px;
     font-size: 14px;
     color: #3A3A3A;
-    border-bottom: 1px solid #e1e1e1; }
+    border-bottom: 1px solid #E1E1E1; }
   .table .icon-more, .table .icon-checked, .table .icon-uncheck {
     cursor: pointer; }
   .table .check-wrap {
@@ -1238,6 +1254,7 @@ select::-ms-expand {
 .jstree-default .jstree-anchor,
 .jstree-default .jstree-animated,
 .jstree-default .jstree-wholerow {
+  -webkit-transition: background-color 0.15s, box-shadow 0.15s;
   transition: background-color 0.15s, box-shadow 0.15s; }
 
 .jstree-default .jstree-hovered {
@@ -1312,7 +1329,6 @@ select::-ms-expand {
 
 .jstree-default .jstree-wholerow {
   -moz-box-sizing: border-box;
-  -webkit-box-sizing: border-box;
   box-sizing: border-box; }
 
 .jstree-default .jstree-wholerow-hovered {
@@ -1881,134 +1897,105 @@ select::-ms-expand {
     font-weight: bold;
     font-size: 1.1em;
     text-shadow: 1px 1px white; }
-
   #jstree-dnd.jstree-dnd-responsive > i {
     background: transparent;
     width: 40px;
     height: 40px; }
-
   #jstree-dnd.jstree-dnd-responsive > .jstree-ok {
     background-image: url("../images/40px.png");
     background-position: 0 -200px;
     background-size: 120px 240px; }
-
   #jstree-dnd.jstree-dnd-responsive > .jstree-er {
     background-image: url("../images/40px.png");
     background-position: -40px -200px;
     background-size: 120px 240px; }
-
   #jstree-marker.jstree-dnd-responsive {
     border-left-width: 10px;
     border-top-width: 10px;
     border-bottom-width: 10px;
     margin-top: -10px; } }
+
 @media (max-width: 768px) {
   .jstree-default-responsive {
     /*
 	.jstree-open > .jstree-ocl,
 	.jstree-closed > .jstree-ocl { border-radius:20px; background-color:white; }
 	*/ }
-
   .jstree-default-responsive .jstree-icon {
     background-image: url("../images/40px.png"); }
-
   .jstree-default-responsive .jstree-node,
   .jstree-default-responsive .jstree-leaf > .jstree-ocl {
     background: transparent; }
-
   .jstree-default-responsive .jstree-node {
     min-height: 40px;
     line-height: 40px;
     margin-left: 40px;
     min-width: 40px;
     white-space: nowrap; }
-
   .jstree-default-responsive .jstree-anchor {
     line-height: 40px;
     height: 40px; }
-
   .jstree-default-responsive .jstree-icon,
   .jstree-default-responsive .jstree-icon:empty {
     width: 40px;
     height: 40px;
     line-height: 40px; }
-
   .jstree-default-responsive > .jstree-container-ul > .jstree-node {
     margin-left: 0; }
-
   .jstree-default-responsive.jstree-rtl .jstree-node {
     margin-left: 0;
     margin-right: 40px;
     background: transparent; }
-
   .jstree-default-responsive.jstree-rtl .jstree-container-ul > .jstree-node {
     margin-right: 0; }
-
   .jstree-default-responsive .jstree-ocl,
   .jstree-default-responsive .jstree-themeicon,
   .jstree-default-responsive .jstree-checkbox {
     background-size: 120px 240px; }
-
   .jstree-default-responsive .jstree-leaf > .jstree-ocl,
   .jstree-default-responsive.jstree-rtl .jstree-leaf > .jstree-ocl {
     background: transparent; }
-
   .jstree-default-responsive .jstree-open > .jstree-ocl {
     background-position: 0 0px !important; }
-
   .jstree-default-responsive .jstree-closed > .jstree-ocl {
     background-position: 0 -40px !important; }
-
   .jstree-default-responsive.jstree-rtl .jstree-closed > .jstree-ocl {
     background-position: -40px 0px !important; }
-
   .jstree-default-responsive .jstree-themeicon {
     background-position: -40px -40px; }
-
   .jstree-default-responsive .jstree-checkbox,
   .jstree-default-responsive .jstree-checkbox:hover {
     background-position: -40px -80px; }
-
   .jstree-default-responsive.jstree-checkbox-selection .jstree-clicked > .jstree-checkbox,
   .jstree-default-responsive.jstree-checkbox-selection .jstree-clicked > .jstree-checkbox:hover,
   .jstree-default-responsive .jstree-checked > .jstree-checkbox,
   .jstree-default-responsive .jstree-checked > .jstree-checkbox:hover {
     background-position: 0 -80px; }
-
   .jstree-default-responsive .jstree-anchor > .jstree-undetermined,
   .jstree-default-responsive .jstree-anchor > .jstree-undetermined:hover {
     background-position: 0 -120px; }
-
   .jstree-default-responsive .jstree-anchor {
     font-weight: bold;
     font-size: 1.1em;
     text-shadow: 1px 1px white; }
-
   .jstree-default-responsive > .jstree-striped {
     background: transparent; }
-
   .jstree-default-responsive .jstree-wholerow {
     border-top: 1px solid rgba(255, 255, 255, 0.7);
     border-bottom: 1px solid rgba(64, 64, 64, 0.2);
     background: #ebebeb;
     height: 40px; }
-
   .jstree-default-responsive .jstree-wholerow-hovered {
     background: #e7f4f9; }
-
   .jstree-default-responsive .jstree-wholerow-clicked {
     background: #beebff; }
-
   .jstree-default-responsive .jstree-children .jstree-last > .jstree-wholerow {
     box-shadow: inset 0 -6px 3px -5px #666666; }
-
   .jstree-default-responsive .jstree-children .jstree-open > .jstree-wholerow {
     box-shadow: inset 0 6px 3px -5px #666666;
     border-top: 0; }
-
   .jstree-default-responsive .jstree-children .jstree-open + .jstree-open {
     box-shadow: none; }
-
   .jstree-default-responsive .jstree-node,
   .jstree-default-responsive .jstree-icon,
   .jstree-default-responsive .jstree-node > .jstree-ocl,
@@ -2016,36 +2003,29 @@ select::-ms-expand {
   .jstree-default-responsive .jstree-checkbox {
     background-image: url("../images/40px.png");
     background-size: 120px 240px; }
-
   .jstree-default-responsive .jstree-node {
     background-position: -80px 0;
     background-repeat: repeat-y; }
-
   .jstree-default-responsive .jstree-last {
     background: transparent; }
-
   .jstree-default-responsive .jstree-leaf > .jstree-ocl {
     background-position: -40px -120px; }
-
   .jstree-default-responsive .jstree-last > .jstree-ocl {
     background-position: -40px -160px; }
-
   .jstree-default-responsive .jstree-themeicon-custom {
     background-color: transparent;
     background-image: none;
     background-position: 0 0; }
-
   .jstree-default-responsive .jstree-file {
     background: url("../images/40px.png") 0 -160px no-repeat;
     background-size: 120px 240px; }
-
   .jstree-default-responsive .jstree-folder {
     background: url("../images/40px.png") -40px -40px no-repeat;
     background-size: 120px 240px; }
-
   .jstree-default-responsive > .jstree-container-ul > .jstree-node {
     margin-left: 0;
     margin-right: 0; } }
+
 .body-alert .alert-page .main {
   position: absolute;
   background-color: #ffffff;
@@ -2266,7 +2246,7 @@ select::-ms-expand {
           margin-right: 15px;
           width: 128px;
           font-size: 14px;
-          color: #6c798d;
+          color: #6C798D;
           float: left;
           text-align: right; }
           .add-org .content-form .input-row .input-colum span i {
@@ -2294,7 +2274,7 @@ select::-ms-expand {
         .add-org .content-form .input-row .input-colum select {
           padding: 0\0;
           width: 350px\0;
-          background: url("../images/icon-arrow-down.png") no-repeat scroll 325px center #f6f9fb;
+          background: url("../images/icon-arrow-down.png") no-repeat scroll 325px center #F6F9FB;
           background: none\0;
           background-color: #F6F9FB; }
         .add-org .content-form .input-row .input-colum textarea {
@@ -2310,7 +2290,7 @@ select::-ms-expand {
           box-shadow: none;
           border: 1px solid #1DAAFC; }
         .add-org .content-form .input-row .input-colum .date-pic {
-          background: url("../images/icon-date.png") no-repeat scroll 325px center #f6f9fb; }
+          background: url("../images/icon-date.png") no-repeat scroll 325px center #F6F9FB; }
         .add-org .content-form .input-row .input-colum .radio-pic {
           display: inline-block;
           vertical-align: middle;

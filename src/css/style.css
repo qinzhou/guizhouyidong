@@ -826,7 +826,6 @@ select::-ms-expand {
   line-height: 38px; }
   .searchbar .select-input::-webkit-input-placeholder {
     font-size: 14px; }
-
 .searchbar .icon-wrap {
   float: right;
   width: 38px;
@@ -2029,7 +2028,6 @@ select::-ms-expand {
   .jstree-default-responsive > .jstree-container-ul > .jstree-node {
     margin-left: 0;
     margin-right: 0; } }
-
 .body-alert {
   display: none; }
   .body-alert .alert-page .main {
